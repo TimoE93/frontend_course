@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model / Margin & Padding</title>
+    <style>
+        /* Css Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            /* wenn nicht box würde 740 px breit ( 500 widht von box + 2 * padding */
+            box-sizing: border-box;
+        }
+        .box {
+            background: #f4f4f4;
+            border: 2px grey solid;
+            width: 500px;
+
+            /*padding on all sides*/
+            padding: 20px;
+
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-bottom: 10px;
+
+            /*padding shorthand = top, right, bottom, left */
+            padding: 10px 20px 10px 20px;
+
+            /*padding shorthand = top/bottom left/right */
+            padding: 10px 20px;
+
+            /*margin on all sides*/
+            margin: 20px;
+            /*margin wie padding*/
+        }
+        .box h3 {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Box One</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+    </div>
+    <div class="box">
+        <h3>Box Two</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+    </div>
+</body>
+</html>
