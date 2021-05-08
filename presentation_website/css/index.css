@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --page-1-color: steelblue;
+    --page-2-color: tan;
+    --page-3-color: teal;
+    --page-4-color: slateblue;
+    --color-primary: white;
+    --font-size: 1.2rem;
+}
+
+body {
+    overflow: hidden;
+    color: var(--color-primary);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 4rem;
+    padding: 30px;
+    margin: 1rem;
+}
+
+#page1 h1 {
+    transform: translateY(-1200px);
+    animation: heading 2s forwards ease-in;
+}
+
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+#page1 p {
+    transform: translateX(-2200px);
+    animation: subheading 2s forwards ease-in 2s;
+}
+
+@keyframes subheading {
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+p {
+    font-size: var(--font-size);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-primary);
+    padding: 1rem 2rem;
+    color: black;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: var(--font-size);
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover, .btn-dark{
+    background: black;
+    color: var(--color-primary);
+}
+
+.btn-dark:hover {
+    background: var(--color-primary);
+    color: black;
+}
+
+#page1 {
+    background-color: var(--page-1-color);
+}
+
+#page2 {
+    background-color: var(--page-2-color);
+}
+
+#page3 {
+    background-color: var(--page-3-color);
+}
+
+#page4 {
+    background-color: var(--page-4-color);
+}
