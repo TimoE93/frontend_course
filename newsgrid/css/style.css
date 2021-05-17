@@ -46,8 +46,52 @@ h1,h2,h3,h4,h5,h6 {
 .container {
     max-width: var(--max-width);
     margin: auto;
-    padding: 2rem;
+    padding: 0 2rem;
     overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    padding: 0.5rem 1.5rem;
+    color: white;
+}
+
+.btn-primary {background: var(--primary-color) }
+.btn-secondary { background: var(--secondary-color) }
+.btn:hover { opacity: 0.8 }
+
+.card {
+    background: #ffffff;;
+    padding: 1rem; 
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #ffffff;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #ffffff;
+}
+
+.py-1{ padding: 1.5rem 0}
+.py-2{ padding: 2rem 0}
+.py-3{ padding: 3rem 0}
+.p-1{ padding: 1.5rem}
+.p-2{ padding: 2rem}
+.p-3{ padding: 3rem}
+
+.bg-dark a,
+.bg-primary a {
+    color: #ffffff;
 }
 
 #main-nav {
@@ -125,23 +169,14 @@ h1,h2,h3,h4,h5,h6 {
 
 #showcase .showcase-content {
     z-index: 1;
-    font-weight: bold;
 }
 
 #showcase .showcase-content h1 {
     margin-bottom: 1rem;
 }
 
-#showcase .showcase-content .btn {
-    margin-top: 0.8rem;
-    display: inline-block;
-    background: var(--primary-color);
-    padding: 0.5rem 1.2rem;
-    color: white;
-}
-
-#showcase .showcase-content .btn:hover {
-    opacity: 0.8;
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
 }
 
 .category {
@@ -156,3 +191,31 @@ h1,h2,h3,h4,h5,h6 {
     background: var(--sports-color);
 }
 
+.category.category-entertainment{
+    background: var(--ent-color);
+    color: #ffffff;
+}
+
+.category.category-tech{
+    background: var(--tech-color);
+    color: #ffffff;
+}
+
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#home-articles .articles-container .card:first-child,
+#home-articles .articles-container .card:last-child {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem
+}
+
+#home-articles .articles-container .card:last-child {
+    grid-column: 2 / span 2
+}
