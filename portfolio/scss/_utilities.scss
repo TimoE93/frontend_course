@@ -86,3 +86,13 @@ input[class^='btn-']:hover{
     }
     
 }
+
+.bg-light {
+    background: #f4f4f4;
+    color: #000;
+}
+
+.bg-dark {
+    background: $dark-color;
+    color: #fff;
+}
