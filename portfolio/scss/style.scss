@@ -73,7 +73,7 @@ ul {
 
 #header {
     &-home {
-    min-height: 100vh;
+    height: 100vh;
     background: url("/dist/img/showcase.jpg") no-repeat center center/cover;
     color: #fff;
 
@@ -88,8 +88,8 @@ ul {
     }
     }
 
-    &-about {
-        background: url("/dist/img/showcase.jpg") no-repeat; 
+    &-inner {
+        background: url("/dist/img/showcase.jpg") no-repeat center center/cover; 
         background-position: center 30%;
 
         .bottom-line {
@@ -129,7 +129,6 @@ ul {
     
     &-b {
         .stats {
-            display: grid;
             grid-template-columns: repeat(4, 1fr);
 
             li {
@@ -227,24 +226,36 @@ ul {
 
         .about-info {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 'bio-image bio bio'
+                                 'awd1 awd2 awd3';   
             gap: 1.2rem;
 
-            img {
-                grid-column: 0 /span 1;
+            .img-bio {
+                grid-area: bio-image;
             }
 
             .bio {
-                grid-column: 2 / span 2;
+                grid-area: bio;
                 border-left: 3px solid $main-color;
                 padding: 0.5rem;
             }
 
+            .fas {
+                color: $main-color;
+                margin: 1rem;
+            }
+
             .award {
-                .fas {
-                    color: $main-color;
-                    margin: 1rem;
+                &-1 {
+                    grid-area: awd1;
+                }
+
+                &-2 {
+                    grid-area: awd2;
+                }
+
+                &-3 {
+                    grid-area: awd3;
                 }
             }
         }
@@ -308,6 +319,96 @@ ul {
     }
 }
 
+#work {
+    &-a {
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            box-shadow: 0 5px 0;
+        }
+    }
+}
+
+#contact {
+    &-a {
+        .bottom-line {
+            width: 50px;
+            margin: auto;
+            border-bottom: 3px solid $main-color;
+        }
+
+        .text-fields {
+            display: grid;
+            grid-template-areas: 'text-fields-name text-fields-mail'
+                                 'text-fields-subject text-fields-phone'
+                                 'text-fields-message text-fields-message';
+            margin-bottom: 5rem;
+
+            &-name {
+                grid-area: text-fields-name;
+            }
+
+            &-mail {
+                grid-area: text-fields-mail;
+            }
+
+            &-subject {
+                grid-area: text-fields-subject;
+            }
+
+            &-phone {
+                grid-area: text-fields-phone;
+            }
+
+            &-message {
+                grid-area: text-fields-message;
+            }
+            
+            input, textarea {
+                padding: 0.5rem;
+                margin: 0.5rem 0.7rem;
+            }
+        }
+
+        button {
+            width: 50%;
+            padding: 1rem 0;
+            transition: all 0.5s ease-in;
+            cursor: pointer;
+            border: none;
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+    }
+
+    &-b {
+        background: $dark-color;
+        color: #fff;
+
+        .contact-info{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            padding: 2rem 0;
+        }
+    }
+
+    &-c {
+        background: $main-color;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 4rem 0;
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
 #main-footer {
     background: $dark-color;
     color: #fff;
@@ -335,3 +436,5 @@ ul {
         
     }
 }
+
+@import 'media';
